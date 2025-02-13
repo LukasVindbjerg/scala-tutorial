@@ -51,7 +51,7 @@ object Basics extends App {
   }
 
   // The notorious factorial recursive function
-  def factorial(n: Int): Int ={
+  def factorial(n: Int): Int = {
     if (n <= 1) 1
     else n * factorial(n - 1)
   }
@@ -65,5 +65,5 @@ object Basics extends App {
     println("Printing from a unit function")
   }
 
-  
+ unitFunction()
 }
