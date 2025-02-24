@@ -93,4 +93,38 @@ object ObjectOrientation extends App {
 
   // Since the case class has a companion with apply, we can simply create an instance without 'new'
   val bob = Person("bob", 34)
+
+  // Exceptions
+  try {
+    val x: String = null
+    x.length
+  } catch {
+    case e: Exception => "Some error message"
+  } finally   {
+    // This will always be executed. E.g. close a file
+  }
+
+  // generics (like 'templating' in C++
+  abstract class MyList[T] {
+    def head: T
+    def tail: MyList[T]
+  }
+
+  // using a generic with a concrete type
+  val aList: List[Int] = List(1, 2, 3)
+  val first = aList.head
+  val rest = aList.tail
+
+  val aStringList = List("Hello", "Scala")
+  val firstString = aStringList.head
+
+  // Point #1: In scals we usually operate with IMMUTABLE values/objects.
+    // benefits are that it works great in multithreaded or distributed envs. And it helps to make sense or reason about the code.
+  val reversedList = aList.reverse
+
+  // Point #2 - Scala is closest to the OO ideal.
+  // Nothing is outside of an object or a class
+
+
+
 }
