@@ -12,7 +12,7 @@ object Basics extends App {
   // String operators
   val aString = "This is Scala"
   val aComposedString: String = "This" + " " + "is" + " " + "composed"
-  val anInterpolatedString = s"After 122 comes $aNumber"
+  val anInterpolatedString = s"After 122 comes ${aNumber}"
 
   // expressions: Structures that can be reduced to a value
   val anExpression = 2 + 3
